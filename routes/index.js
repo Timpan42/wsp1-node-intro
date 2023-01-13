@@ -8,7 +8,7 @@ router.get('/', async function (req, res, next) {
     });
   });
 
-router.get('/', async function (req, res, next) {
+router.get('/andra', async function (req, res, next) {
     res.render('index.njk', {
         message: 'Hello world! Now with a route file!',
         title: 'Nunjucks hello world',

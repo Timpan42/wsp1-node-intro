@@ -17,4 +17,4 @@ nunjucks.configure('views', {
 
 app.use(express.static('public'))
 app.use('/', indexRouter);
-
+/home/tim/code/wsp1-node-intro/views
