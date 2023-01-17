@@ -2,49 +2,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
-body{
+body {
     background-color: #e5e5e5;
     font-family: 'Nunito', sans-serif;
 
 }
 
-nav {
+.navbar {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(52, 5, 96);
     color: #f5f5f5;
     font-size: 1.5rem;
-    text-align: center;
-    align-items: center;
-    font-family: 'Kanit', sans-serif;
-}
-nav > ul > li > a {
-        text-decoration: none;
+    min-height: 4rem;
+
+    &__button {
+        background-color: transparent;
         color: aliceblue;
+        @media (min-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__collapse {
+        @media (max-width: 599px) {
+            display: none;
+        }
+
+        >ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        &--show {
+            display: block;
+            width: 100%;
+
+            >ul {
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+    }
 }
-nav > ul{
+.show{
     display: flex;
-    flex-direction: row;
-    padding: 0;
 }
 
-a:hover{
+.hide{
+    display: none;
+}  
+
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
     background-color: rgb(38, 38, 38);
 }
 
-nav > ul > li{
-    list-style: none;
-    margin-top: 5px;
-    padding: 0 0.5rem;
-    
-}
-
-img{
+img {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
 }
 
-h1{
+h1 {
     text-align: center;
     align-items: center;
 }
@@ -52,4 +80,9 @@ h1{
 h2 h3 {
     margin-left: 15%;
     margin-right: 15%;
+}
+
+.container {
+    width: min(80ch, 100vw - 2rem);
+    margin-inline: auto;
 }
