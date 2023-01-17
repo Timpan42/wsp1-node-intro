@@ -3,17 +3,23 @@ const  router = express.Router();
 
 router.get('/', async function (req, res, next) {
     res.render('index.njk', {
-        message: 'OST asdwd',
-        title: 'Nunjucks epic explotionnn!',
+        message: 'Välkomen',
+        title: 'Home',
     });
   });
 
-router.get('/andra', async function (req, res, next) {
-    res.render('index.njk', {
-        message: 'Hello world! Now with a route file!',
-        title: 'Nunjucks hello world',
+router.get('/levande', async function (req, res, next) {
+    res.render('levande.njk', {
+        message: '',
+        title: 'Det levande',
     });
 });
 
+router.get('/helig', async function (req, res, next) {
+    res.render('helig.njk', {
+        message: '',
+        title: 'Det heliga templet',
+    });
+});
 
 module.exports = router
